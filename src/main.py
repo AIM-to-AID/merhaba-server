@@ -1,9 +1,5 @@
 # Lib
 from flask import Flask, request, jsonify
-import sys
-
-# Modules
-sys.path.insert(0, './src')
 
 from translate import _translate_path
 from find_places import _find_places_path
@@ -41,5 +37,3 @@ def place_details_path():
     return _place_details_path(request)
   else:
     return "", 400
-
-app.run(host="0.0.0.0", port=8080)
